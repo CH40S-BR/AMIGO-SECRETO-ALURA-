@@ -1,0 +1,303 @@
+/* Melhorando o fundo */
+body {
+  background: #0f0f0f;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Estilo do header */
+.header {
+  background: linear-gradient(135deg, #3b3b3b, #212121);
+  color: #ffffff;
+  padding: 40px 0;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: 'Lora', serif;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #f0c27b, #4b1248);
+}
+
+.header:hover {
+  background: linear-gradient(135deg, #4b1248, #f0c27b);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+}
+
+/* Efeito no título */
+.header h1 {
+  font-size: 60px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 5px;
+  color: #f5f5f5;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  margin: 0;
+}
+
+.header h1 span {
+  display: block; /* Faz com que cada palavra fique em uma linha */
+  font-size: 48px;
+  font-weight: 600;
+  color: #f0c27b; /* Cor da palavra */
+}
+
+.header:hover h1 {
+  transform: scale(1.05);
+}
+
+/* Ajuste no conteúdo principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  flex-wrap: wrap;
+}
+
+.image-wrapper img {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: float 6s ease-in-out infinite;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(193, 154, 107, 0.8);
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Melhorando o conteúdo */
+.content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(193, 154, 107, 0.5);
+  margin-left: 20px;
+  transition: all 0.4s ease-in-out;
+  max-width: 600px;
+  width: 80%;
+  margin-top: 30px;
+}
+
+/* Efeito hover no conteúdo */
+.content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(193, 154, 107, 0.7);
+}
+
+/* Melhorando os títulos */
+h2, h3 {
+  color: #f0c27b;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  font-size: 42px;
+  margin-top: 50px;
+  color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 3px;
+}
+
+/* Estilo do formulário */
+.form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  background: #333;
+  color: #f5f5f5;
+  transition: background 0.3s ease;
+  font-size: 16px;
+}
+
+.form input:focus {
+  background: #444;
+  outline: none;
+}
+
+.button {
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+/* Botão Primário */
+.primary {
+  background: #f0c27b;
+  color: #1b1b1b;
+}
+
+.primary:hover {
+  background: #4b1248;
+}
+
+/* Botão Secundário */
+.secondary {
+  background: #f5f5f5;
+  color: #000;
+}
+
+.secondary:hover {
+  background: #ddd;
+}
+
+/* Link do formulário */
+.form__link {
+  display: block;
+  margin-top: 15px;
+  color: #f0c27b;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.form__link:hover {
+  color: #4b1248;
+}
+
+/* Melhorando a lista de amigos */
+.friends-list {
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  margin: 30px auto 0;
+  box-shadow: 0 0 30px rgba(193, 154, 107, 0.5);
+}
+
+.friends-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.friends-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background: #333;
+  color: #f5f5f5;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(193, 154, 107, 0.3);
+  transition: all 0.3s ease;
+}
+
+.friends-list li:hover {
+  background: #444;
+  transform: translateY(-5px);
+}
+
+/* Botão de excluir */
+.friends-list li button {
+  background: #f0c27b;
+  color: #1b1b1b;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.friends-list li button:hover {
+  background: #4b1248;
+}
+
+/* Estilizando o modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1b1b1b;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(193, 154, 107, 0.5);
+  max-width: 500px;
+  width: 80%;
+}
+
+.close {
+  color: #f0c27b;
+  font-size: 30px;
+  cursor: pointer;
+  float: right;
+}
+
+.modal-content p {
+  font-size: 18px;
+  color: #f5f5f5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .friends-list {
+    width: 90%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}

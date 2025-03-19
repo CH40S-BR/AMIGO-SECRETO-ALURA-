@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"/>
+    <link rel="shortcut icon" type="imagex/png" href="./assets/icone.png"> 
+    <link rel="stylesheet" href="style.css" />
+    <title>Amigo Secreto - Peaky Blinders</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Amigo Secreto</h1>
+    </header>
+    <main>
+      <section class="container">
+        <div class="image-wrapper">
+          <img class="page__image" src="./assets/peaky-blinders.png" alt="Imagem estilo Peaky Blinders" />
+        </div>
+        <div class="content">
+          <h2>Cadastre seu amigo</h2>
+          <form id="addFriendForm" class="form">
+            <label for="nome-amigo">Nome do amigo:</label>
+            <input id="nome-amigo" type="text" placeholder="Digite o nome" />
+            <div class="form__buttons">
+              <button onclick="adicionar()" type="button" class="button primary">Adicionar</button>
+              <button onclick="sortear()" type="button" class="button secondary">Sortear</button>
+              <a onclick="reiniciar()" href="#" class="form__link">Reiniciar</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Lista de Amigos -->
+      <section class="friends-list">
+        <h3>Amigos cadastrados</h3>
+        <ul id="amigos-lista">
+          <!-- Os amigos adicionados aparecerão aqui -->
+        </ul>
+      </section>
+      
+      <!-- Modal para exibição do resultado -->
+      <div id="resultadoModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <h3>Resultado do Sorteio</h3>
+          <p id="resultadoTexto"></p>
+        </div>
+      </div>
+
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
