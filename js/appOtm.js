@@ -1,5 +1,5 @@
 // CAPTURA ELEMENTOS
-let elemAmigo = document.getElementById("nome-amigo"); //input
+let elemAmigo = document.getElementById("nome-amigo"); //input 
 let elemListaAmigos = document.getElementById("lista-amigos"); // paragrafo
 let elemListaSorteio = document.getElementById("lista-sorteio"); // paragrafo
 
